@@ -1,0 +1,10 @@
+services:
+  ghostdrive:
+    build: .
+    container_name: ghostdrive
+    ports:
+      - "8080:8080"
+    volumes:
+      - /home/vishwa/Documents:/data:ro
+    environment:
+      - GHOSTDRIVE_ROOT_DIRECTORY=/data
